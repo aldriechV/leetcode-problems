@@ -6,6 +6,12 @@ A word is defined as a sequence of non-space characters. The words in s will be 
 Return a string of the words in reverse order concatenated by a single space.
 
 Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.
+
+Solving Process:
+1. Split the input string into words.
+2. Reverse the list of words.
+3. Join the reversed list into a single string with a single space separating each word.
+4. Return the resulting string.
 """
 
 class Solution(object):

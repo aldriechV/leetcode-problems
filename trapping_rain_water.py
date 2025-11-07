@@ -3,6 +3,11 @@
 Trapping Rain Water
 
 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
+Solution implementation:
+1. Create two arrays to store the maximum height to the left and right of each index. This is done to calculate the water that can be trapped at each index.
+2. Iterate thru the minimum of the left and right max heights at each index, subtracting the height at that index to get the water trapped.
+3. Sum up the water trapped at each index to get the total amount of trapped water.
 """
 
 class Solution(object):

@@ -6,6 +6,13 @@ Return the indices of the two numbers, index1 and index2, added by one as an int
 The tests are generated such that there is exactly one solution. You may not use the same element twice.
 
 Your solution must use only constant extra space.
+
+Solving Process:
+1. Start two pointers, each at the beginning and end of the array.
+2. Check the sum of the two numbers at the pointers.
+3. If the sum is equal to the target, return the indices.
+4. If the sum is less than the target, move the left pointer to the right to increase the sum.
+5. Perform the inverse if the sum is greater than the target.
 """
 
 class Solution(object):
