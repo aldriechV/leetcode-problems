@@ -31,11 +31,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        map = {}
-        for i, n in enumerate(nums):
-            diff = target - n
-            if diff in map:
-                return [map[diff], i]
-            map[n] = i
-        return -1
+        
+        numMap = {}
+        n = len(nums)
+
+        for i in range(n):
+            complement = target - nums[i]
+            if complement in numMap:
+                return [numMap[complement], i]
+            numMap[nums[i]] = i
+        return []
 
