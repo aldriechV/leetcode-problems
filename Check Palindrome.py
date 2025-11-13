@@ -9,6 +9,6 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        check = "".join([char.lower() for char in s if char.isalnum()])
+        check = "".join([char.lower() for char in s if char.isalnum()])     
     
         return check == check[::-1]
