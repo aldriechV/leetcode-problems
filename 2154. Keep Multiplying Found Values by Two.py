@@ -18,9 +18,8 @@ class Solution(object):
         :type original: int
         :rtype: int
         """
-        if original not in nums: return original
 
         start = nums.index(original)
         while original in nums:
             original *= 2
-        return original
+        return original 
