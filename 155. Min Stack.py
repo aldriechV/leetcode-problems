@@ -19,6 +19,8 @@ You must implement a solution with O(1) time complexity for each function.
 
 class MinStack(object):
 
+ 
+    # Standard initialization for a stack, but I am using a min stack in order to keep track of the smallest value
     def __init__(self):
         self.stack = []
         self.min = []
@@ -29,6 +31,7 @@ class MinStack(object):
         :type val: int
         :rtype: None
         """
+        # add to the lowest stack normally, but for the minimum stack we add a tracker to see if the value appended is currently smaller than the smallest number on the min stack. 
         self.stack.append(val)
         if not self.min:
             self.min.append(val)
@@ -39,7 +42,7 @@ class MinStack(object):
             else:
                 self.min.append(min_track)
 
-
+    # pop is done to both stacks in order to account for if the smallest value was removed from the normal stack. 
     def pop(self):
         """
         :rtype: None
@@ -47,13 +50,14 @@ class MinStack(object):
         self.stack.pop()
         self.min.pop()
 
+    # returns the top value of the normal stack
     def top(self):
         """
         :rtype: int
         """
         return self.stack[-1]
         
-
+    #return the topmost value of the min stack
     def getMin(self):
         """
         :rtype: int
