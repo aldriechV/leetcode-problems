@@ -1,3 +1,15 @@
+"""
+Two-pointer solution.
+
+Start from both ends and compute the container area.
+Move the pointer with the smaller height inward because
+the shorter wall limits the area.
+
+Time: O(n)
+Space: O(1)
+"""
+
+
 class Solution(object):
     def maxArea(self, height):
         """
