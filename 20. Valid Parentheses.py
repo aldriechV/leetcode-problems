@@ -30,3 +30,26 @@ class Solution(object):
                 if i == "}" and top != "{":
                     return False
         return len(stack) == 0
+
+
+# optimized version using a dictionary for matching brackets
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        parenPairs = {
+            ")": "(",
+            "]": "[",
+            "}": "{"
+        }
+        stack = []
+        for i in s:
+            if i in parenPairs.values():
+                stack.append(i)
+            elif stack and parenPairs[i] == stack[-1]:
+                stack.pop()
+            else:
+                return False
+        return stack == []
